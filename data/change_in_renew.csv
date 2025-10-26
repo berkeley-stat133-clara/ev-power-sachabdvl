@@ -1,0 +1,53 @@
+"","State","clean_energy","prop_of_clean_in_change","Count_evs"
+"1","alabama",TRUE,"<0%",13047
+"2","alaska",TRUE,"<20%",2697
+"3","arizona",TRUE,"<20%",89798
+"4","arkansas",TRUE,"<20%",7108
+"5","california",TRUE,">50%",1256646
+"6","colorado",TRUE,"<20%",90083
+"7","connecticut",TRUE,"<0%",31557
+"8","delaware",TRUE,"<20%",8435
+"9","district of columbia",TRUE,"<20%",8066
+"10","florida",TRUE,"<0%",254878
+"11","georgia",TRUE,"<40%",92368
+"12","hawaii",TRUE,"<20%",25565
+"13","idaho",TRUE,"<20%",8501
+"14","illinois",TRUE,"<20%",99573
+"15","indiana",TRUE,"<20%",26101
+"16","iowa",TRUE,"<20%",9031
+"17","kansas",TRUE,"<40%",11271
+"18","kentucky",TRUE,"<20%",11617
+"19","louisiana",TRUE,"<0%",8150
+"20","maine",TRUE,"<0%",7377
+"21","maryland",TRUE,"<20%",72139
+"22","massachusetts",TRUE,"<20%",73768
+"23","michigan",TRUE,"<0%",50284
+"24","minnesota",TRUE,"<0%",37050
+"25","mississippi",TRUE,"<20%",3590
+"26","missouri",TRUE,"<40%",26861
+"27","montana",TRUE,"<20%",4608
+"28","nebraska",TRUE,"<20%",6920
+"29","nevada",TRUE,"<40%",47361
+"30","new hampshire",TRUE,"<0%",9861
+"31","new jersey",TRUE,"<20%",134753
+"32","new mexico",TRUE,"<20%",10276
+"33","new york",TRUE,"<0%",131250
+"34","north carolina",TRUE,"<0%",70164
+"35","north dakota",TRUE,"<0%",959
+"36","ohio",TRUE,"<0%",50393
+"37","oklahoma",TRUE,"<20%",22843
+"38","oregon",TRUE,"<40%",64361
+"39","pennsylvania",TRUE,"<0%",70154
+"40","rhode island",TRUE,"<20%",6396
+"41","south carolina",TRUE,">50%",20873
+"42","south dakota",TRUE,"<0%",1675
+"43","tennessee",TRUE,"<20%",33221
+"44","texas",TRUE,"<20%",230125
+"45","total",TRUE,"<20%",3555445
+"46","utah",TRUE,"<20%",39998
+"47","vermont",TRUE,"<20%",7816
+"48","virginia",TRUE,"<40%",84936
+"49","washington",TRUE,"<0%",152101
+"50","west virginia",TRUE,"<20%",2758
+"51","wisconsin",TRUE,"<20%",24943
+"52","wyoming",TRUE,"<20%",1139

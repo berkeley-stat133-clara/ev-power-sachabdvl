@@ -1,5 +1,91 @@
 ---
-title: "EV Power Dashboard"
+title: "Sacha Bondeville's EDA portfolio"
 format: dashboard
 ---
+
+# EV Map !
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(maps)
+library(leaflet)
+library(sf)
+library(rnaturalearth)
+library(RColorBrewer)
+```
+
+For the Stat133 course at UC Berkeley, we had to work on electric vehicules (evs) registration data to produce a map. I chose to specifically focus on the following question:
+
+*Which states actually improved their clean energy portfolio in ht elast three years and is there a correlation between their clean energy improvement and the number of evs registration ?*
+
+```{r}
+#| echo : false
+Change_in_renew <- read.csv("/Users/sachabondeville/Documents/stat133/Projects/Project-4/data/change_in_renew.csv")
+
+us_states <- ne_states(country = "united states of america", returnclass = "sf")|>
+mutate(name = tolower(name))
+
+us_map_joined <- us_states |>
+    left_join(Change_in_renew, by = c("name" = "State"))
+
+
+
+us_map_joined$prop_of_clean_in_change <- factor(
+  us_map_joined$prop_of_clean_in_change,
+  levels = c("<0%", "<20%", "<40%","<50%", ">50%")
+)
+
+pal <- colorFactor(
+palette = c(
+  "#d73027",  
+  "#fc8d59",  
+  "#fee08b",  
+  "#d9ef8b",  
+  "#1a9850"   
+),
+domain = us_map_joined$prop_of_clean_in_change
+)
+
+leaflet(us_map_joined) |>
+addTiles() |>
+addMarkers(lng = -122.259, lat = 37.872, popup = "UC Berkeley") |>
+addPolygons(
+fillColor = ~pal(prop_of_clean_in_change),
+color = "white",
+weight = 1,
+fillOpacity = 0.8,
+label = ~paste0(toupper(name),"'s # of EV registrations: ", Count_evs))|>
+addLegend(
+pal = pal,
+values = ~prop_of_clean_in_change,
+title = "%change in new clean energy (last 3 years)",
+position = "bottomright"
+)
+
+```
+
+## Analysis
+
+The map first shows that a lot of states actually decreased their clean energy supply in their electrical output. These states however can still have a lot of EV registration (like Florida) which can reveal two things : - customers lack information and just believe an electric car is greener (while not necessarily) - customers do not particularly care and just like to have an electric car (for the status, for the speed)
+
+Two states increased considerably the part of clean energy in their portfolio : California and South Carolina. It's a good thing, as California is the first state in terms of EV registrations in 2023.
+
+Let's also remember California's weather allow for an easy use of solar energy. It's harder for other states, but our analysis is pretty generous with the definition of clean energy (we include nuclear) so there is definitely room for improvement.
+
+# Methodology
+
+```{=html}
+<div style="text-align:center; margin: 10px 0;">
+  <a href="https://sacha-bondeville.quarto.pub/ev-power---lab-4-project-report/" 
+     target="_blank" 
+     class="btn btn-primary btn-sm" 
+     style="font-size: 12px; padding: 4px 10px; border-radius: 6px;">
+    📄 View Full Report
+  </a>
+</div>
+```
+
+
+
 

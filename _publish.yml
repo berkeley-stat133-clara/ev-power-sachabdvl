@@ -1,0 +1,8 @@
+- source: report.qmd
+  quarto-pub:
+    - id: 66a75819-2a7e-43e1-bcf3-d7a4f0b2ad0b
+      url: https://sacha-bondeville.quarto.pub/ev-power---lab-4-project-report
+- source: ev-dashboard.qmd
+  quarto-pub:
+    - id: e82b605d-f2a1-48bc-834f-0753564e36fe
+      url: https://sacha-bondeville.quarto.pub/sacha-bondevilles-eda-portfolio
